@@ -1,0 +1,62 @@
+# Note: all you personal configuration and overrides should go to the file .gitconfig.user instead of this file
+
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
+[alias]
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  # Display recent branches, and then check out the selected branch
+  cr = !git for-each-ref --sort=-committerdate --format='%(committerdate:relative): %(refname:short)' refs/heads/ | head -n 10 | fzf| cut -d':' -f2 | xargs git checkout
+
+[color]
+  ui = true
+
+[core]
+  excludesfile = ~/.gitignore
+  checkRoundtripEncoding = SHIFT-JIS,UTF-16LE-BOM
+  autocrlf = input
+  eol = lf
+
+[init]
+  defaultBranch = main
+
+[help]
+  autocorrect = 1
+
+# Histogram is (unnoticeably) slower, but it generates much cleaner diffs
+[diff]
+  algorithm = histogram
+  colorMoved = default
+
+[merge]
+  ff = false
+  conflictstyle = zdiff3
+
+# Automatic housekeeping
+[fetch]
+  prune = true
+
+# Force all new branches to automatically use rebase
+[pull]
+  rebase = true
+
+# Push easily. http://stackoverflow.com/a/23918418/89484
+[push]
+  default = current
+
+[stash]
+  showPatch = true
+
+[advice]
+  addIgnoredFile = false
+
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+
+# Keep this at the end so that the include overrides the config properly
+[include]
+    # All your personal configuration and changes should go to that file
+    path = .gitconfig.user

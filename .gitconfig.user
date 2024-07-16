@@ -1,0 +1,8 @@
+[user]
+# Please adapt and uncomment the following lines:
+#  name = Your Name
+#  email = your.name@swisstxt.ch
+
+# If you are always using a Linux shell for git you can uncomment this to fix colors in git diffs:
+# [core]
+#   pager = less -R
