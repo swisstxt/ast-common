@@ -10,6 +10,9 @@ The installation scripts create symbolic links from the home directory to the co
 
 Note that if you delete this repository then the Git configuration will stop working. If you move this repository you will have to run again the installation script.
 
+## Dependencies
+- [fzf](https://github.com/junegunn/fzf) - needed for `git cr`
+
 ## Installation
 
 ### Linux and WSL
