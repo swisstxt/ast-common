@@ -22,3 +22,5 @@ backup_and_link() {
 backup_and_link "$(pwd)/.gitconfig" "$HOME/.gitconfig"
 backup_and_link "$(pwd)/.gitignore.global" "$HOME/.gitignore.global"
 backup_and_link "$(pwd)/.gitconfig.user" "$HOME/.gitconfig.user"
+
+backup_and_link "$(pwd)/.editorconfig" "$HOME/.editorconfig"

@@ -17,6 +17,8 @@ call :backup_and_link "%script_path%.gitconfig" "%userprofile%\.gitconfig"
 call :backup_and_link "%script_path%.gitignore.global" "%userprofile%\.gitignore.global"
 call :backup_and_link "%script_path%.gitconfig.user" "%userprofile%\.gitconfig.user"
 
+call :backup_and_link "%script_path%.editorconfig" "%userprofile%\.editorconfig"
+
 pause
 
 rem ----------------------------
