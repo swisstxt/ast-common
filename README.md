@@ -32,5 +32,6 @@ install.bat
 - **.gitconfig.user**: Your personal Git configuration file for your committer name/email, and any other custom changes that you don't plan to push to this common config repository.
 - **.gitconfig**: Common Git configuration file for the team. Changes in this file should only be made if they are intended to be committed to this common config repository.
 - **.gitignore**: Standard `.gitignore` file for the team.
+- **.editorconfig**: [Universal](https://editorconfig.org/#pre-installed) editors configuration that specifies the type of line endings that should be used, indentation, etc.
 
 Note that since these files are symlinked to your home directory you can edit them here, push, and pull without needing to copy them or install them again afterward.
