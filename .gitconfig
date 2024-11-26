@@ -56,6 +56,9 @@
 [url "git@github.com:"]
   insteadOf = https://github.com/
 
+[url "git@gist.github.com:"]
+  insteadOf = https://gist.github.com/
+
 # Keep this at the end so that the include overrides the config properly
 [include]
     # All your personal configuration and changes should go to that file
