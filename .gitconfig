@@ -19,6 +19,9 @@
   checkRoundtripEncoding = SHIFT-JIS,UTF-16LE-BOM
   autocrlf = input
   eol = lf
+  # Make `git rebase` safer on macOS.
+  # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+  trustctime = false
 
 [init]
   defaultBranch = main
@@ -30,6 +33,12 @@
 [diff]
   algorithm = histogram
   colorMoved = default
+  # Detect copies as well as renames.
+  renames = copies
+
+[diff "bin"]
+  # Diff binary files using hexdump
+  textconv = hexdump -v -C
 
 [merge]
   ff = false
@@ -46,9 +55,19 @@
 # Push easily. http://stackoverflow.com/a/23918418/89484
 [push]
   default = current
+  # git push relevant annotated tags when pushing branches
+  followTags = true
 
 [stash]
   showPatch = true
+
+[apply]
+  # Detect whitespace errors when applying a patch.
+  whitespace = fix
+
+[branch]
+  # Show most recently changed branches first.
+  sort = -committerdate
 
 [advice]
   addIgnoredFile = false
@@ -61,5 +80,5 @@
 
 # Keep this at the end so that the include overrides the config properly
 [include]
-    # All your personal configuration and changes should go to that file
-    path = .gitconfig.user
+  # All your personal configuration and changes should go to that file
+  path = .gitconfig.user
