@@ -1,3 +1,9 @@
+# Whitelist .github so that it’s searched by default by ripgrep instead of being ignored
+# See: https://manned.org/rg#:~:text=note%20that%20if%20a%20hidden%20file%20or%20a%20directory%20is%20whitelisted%20in%20an%20ignore%20file%2C%20then%20it%20will%20be%20searched%20even%20if%20this%20flag%20isn't%20provided
+!.github
+
+
+
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,linux,vim,visualstudiocode,jetbrains+all,node,react,vuejs,csharp,dotnetcore
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,linux,vim,visualstudiocode,jetbrains+all,node,react,vuejs,csharp,dotnetcore
 
